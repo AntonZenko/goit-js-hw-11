@@ -82,7 +82,7 @@ async function renderImages(value, page) {
 
     refs.gallery.insertAdjacentHTML('beforeend', makeCards(hits));
     lightbox.refresh();
-    scroll();
+    // scroll();
     addEventListener('scroll', onScroll);
   } catch (error) {
     console.log(error.message);
@@ -90,19 +90,25 @@ async function renderImages(value, page) {
   }
 }
 
-function scroll() {
-  const { height: formHeight } = refs.form.getBoundingClientRect();
-  let topScroll;
+// function scroll() {
+// const { height: cardHeight } = document
+//   .querySelector('.gallery')
+//   .firstElementChild.getBoundingClientRect();
+// window.scrollBy({
+//   top: cardHeight,
+//   behavior: 'smooth',
+// });
+// const { height: formHeight } = refs.form.getBoundingClientRect();
+// let topScroll;
+// if (page === 1) {
+//   topScroll = formHeight;
+//   window.scrollBy({
+//     top: topScroll,
+//     behavior: 'smooth',
+//   });
+// }
+// }
 
-  if (page === 1) {
-    topScroll = formHeight;
-
-    window.scrollBy({
-      top: topScroll,
-      behavior: 'smooth',
-    });
-  }
-}
 function checkTotalPages(totalHits) {
-  totalPages = Math.ceil(totalHits / 30);
+  totalPages = Math.ceil(totalHits / 40);
 }

@@ -9,7 +9,7 @@ export default async function getImages(query, page) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
-    per_page: 30,
+    per_page: 40,
     page,
     q: query,
   };
