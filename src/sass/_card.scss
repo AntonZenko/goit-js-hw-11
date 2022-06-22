@@ -1,0 +1,111 @@
+@import "./vars";
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 4 - 30px);
+  margin: 15px;
+  border: 1px solid $card-border-color;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: $transition;
+}
+
+@media screen and (min-width: 1321px) {
+  .photo-card {
+    animation: anim 1000ms;
+  }
+
+  .photo-card:hover {
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.photo-card img {
+  height: 200px;
+  object-fit: cover;
+}
+.photo-card:hover img {
+  transform: scale(1.03);
+  transition: $transition;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  margin-top: auto;
+  flex-direction: row;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+}
+
+.info-item b {
+  margin-bottom: 7px;
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .photo-card {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+    animation: anim 1000ms;
+  }
+
+  .photo-card img {
+    height: 150px;
+  }
+
+  .info-item {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .photo-card {
+    width: calc(100% / 2 - 16px);
+    margin: 8px;
+    animation: anim 1000ms;
+  }
+
+  .photo-card img {
+    height: 130px;
+  }
+
+  .info-item {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .photo-card {
+    width: 100%;
+    animation: anim 1000ms;
+  }
+  .photo-card img {
+    height: 250px;
+  }
+  .info {
+    font-size: 12px;
+    justify-content: space-evenly;
+  }
+
+  .photo-card {
+    animation: anim 1000ms;
+  }
+}

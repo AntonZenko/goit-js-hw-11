@@ -1,0 +1,56 @@
+@import "./vars";
+
+body {
+  padding-top: 50px;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.7));
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: $transition;
+  z-index: 100;
+}
+
+.search-form input {
+  height: 40px;
+  width: 260px;
+  padding-left: 10px;
+  padding-right: 75px;
+  outline: none;
+  border: 1px solid $accent-color;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  // outline: none;
+  transition: border-color 200ms linear;
+  &:hover,
+  &:focus {
+    border-color: $hover-color;
+  }
+}
+
+.search-form button {
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 70px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: $accent-color;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: $transition;
+  &:hover,
+  &:focus {
+    color: $title-text-color;
+    background-color: $hover-color;
+  }
+}

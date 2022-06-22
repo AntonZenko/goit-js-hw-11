@@ -1,0 +1,42 @@
+.container {
+  width: 1320px;
+  padding: 30px 15px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: -15px;
+}
+
+@media screen and (max-width: 1320px) {
+  .container {
+    width: 768px;
+  }
+
+  .gallery {
+    margin: -10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+
+  .gallery {
+    margin: -8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .gallery {
+    margin: -15px;
+  }
+}
